@@ -21,13 +21,30 @@ def feladat2():
     lista = []
     for i in range(13):
         szam: int = random.randint(-40, 150)
-        lista.append(str(szam))
+        lista.append(int(szam))
         print(szam)
+    return lista
 
 def ketjegyuek_szama(lista):
-    darabszam = []
+    darabszam: int = 0
+    for i in range(0, len(lista), 1):
+        if 100 > lista[i]> 9 or lista[i] < (-9):
+            darabszam += 1
+    return darabszam
+
+def paros_osszege(lista):
+    parosok = []
     for i in range(0, len(lista), 1):
         if lista[i] % 2 == 0:
-            darabszam += 1
-        i += 1
-    return darabszam
+            parosok.append(lista[i])
+            x = sum(parosok)
+    return x
+
+def paratlan_osszege(lista):
+    paratlanok = []
+    for i in range(0, len(lista), 1):
+        if not(lista[i] % 2 == 0):
+            paratlanok.append(lista[i])
+            x = sum(paratlanok)
+    return x
+

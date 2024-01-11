@@ -1,12 +1,17 @@
 import dolgozat
-lista = []
 
 dolgozat.beker()
 print("\n")
-"""dolgozat.bekerb()"""
+dolgozat.bekerb()
 print("\n")
 lista = dolgozat.feladat2()
 print(lista)
 print("\n")
 darabszam: int = dolgozat.ketjegyuek_szama(lista)
 print(f"A kétjegyűek darabja: {darabszam}")
+print("\n")
+parosok:int = dolgozat.paros_osszege(lista)
+print(f"Páros számok összege: {parosok}")
+print("\n")
+paratlanok: int = dolgozat.paratlan_osszege(lista)
+print(f"A páratlanok összege: {paratlanok}")
